@@ -2,7 +2,7 @@ FROM phusion/baseimage:0.9.22
 MAINTAINER Zhan.Shi <g.shizhan.g@gmail.com>
 
 # get dependencies
-RUN apt-get update apt-get install -yq \
+RUN apt-get update && apt-get install -yq \
         build-essential git-core m4 scons \
         zlib1g zlib1g-dev \
         libprotobuf-dev protobuf-compiler libprotoc-dev libgoogle-perftools-dev \
