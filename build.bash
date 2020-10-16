@@ -1,7 +1,8 @@
 #!/bin/bash
 # Build and Clean in one step to keep image manageable
 
-scons -j$(nproc) --ignore-style build/X86/gem5.opt
+git apply /usr/local/src/nvmain/patches/gem5/nvmain2-gem5-11688+
+scons -j$(nproc) --ignore-style EXTRAS=nvmain build/X86/gem5.opt
 rm -f /usr/local/bin/gem5.opt
 mv build/X86/gem5.opt /usr/local/bin
 rm -rf build

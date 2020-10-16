@@ -13,6 +13,8 @@ RUN apt-get clean && rm -Rf /var/lib/apt/lists/*
 # checkout repo
 WORKDIR /usr/local/src
 RUN git clone --depth=1 https://github.com/gem5/gem5.git
+RUN git clone --depth=1 https://github.com/SEAL-UCSB/NVmain.git
+
 # build it
 WORKDIR /usr/local/src/gem5
 ADD build.bash /usr/local/src/gem5/build.bash
